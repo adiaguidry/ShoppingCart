@@ -19,7 +19,7 @@ One Page E-Commerce Site built with React and Firebase
 > project file should be running on local host port 8000
 
 ## Components
-1. Catalogue: Immutable (for now) list of items set as Firebase Object
+####Catalogue: Immutable (for now) list of items set as Firebase Object
 
 > a. Ability to select items for add into cart
     
@@ -27,7 +27,7 @@ One Page E-Commerce Site built with React and Firebase
 
 > c. sort by Category (2.0)
 
-2. Catalogue Item (props):
+####Catalogue Item (props):
 
 > a. Price
 
@@ -41,13 +41,13 @@ One Page E-Commerce Site built with React and Firebase
 
 > f. Product Image (2.0)
 
-> - Catalogue Item: Sub components: Add to Cart Button
+#####Catalogue Item: Sub components: Add to Cart Button
 
-3. Shopping Cart: List of items chosen from Catalogue
+####Shopping Cart: List of items chosen from Catalogue
 
     - a. Checkout ability: auto-calculates total price of all items in cart
     
-4. Order Confirmation Page
+####Order Confirmation Page
 
     - a. A receipt of all items purchased with total cost etc.
     
