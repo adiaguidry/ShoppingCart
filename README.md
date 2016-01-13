@@ -4,19 +4,19 @@ One Page E-Commerce Site built with React and Firebase
 
 ## Node Packages/Set-Up
 
-> - Make sure package.json file is located in project directory.
+> Make sure package.json file is located in project directory.
 
-> - Navigate to your project directory and run the following commands. 
+> Navigate to your project directory and run the following commands. 
 
-> - install node modules with npm
+> install node modules with npm
 
 > `npm install`
 
-> - run gulp to start live reload and debugger tools
+> run gulp to start live reload and debugger tools
 
 > `gulp`
 
-> - project file should be running on local host port 8000
+> project file should be running on local host port 8000
 
 ## Components
 1. Catalogue: Immutable (for now) list of items set as Firebase Object
