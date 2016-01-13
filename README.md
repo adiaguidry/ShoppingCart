@@ -34,16 +34,14 @@ One Page E-Commerce Site built with React and Firebase
 > a. Price
 
 > b. Availability
-
-    ###2.0 specs
     
-> c. Estimated Shipping Date
+> c. Estimated Shipping Date (2.0)
 
-> d. Brand
+> d. Brand (2.0)
 
-> e. Category: Clothes/Electronics...etc.
+> e. Category: Clothes/Electronics...etc. (2.0)
 
-> f. Product Image
+> f. Product Image (2.0)
 
 > - Catalogue Item: Sub components: Add to Cart Button
 
@@ -55,6 +53,4 @@ One Page E-Commerce Site built with React and Firebase
 
     - a. A receipt of all items purchased with total cost etc.
     
-    ###2.0 specs
-    
-    - b. Estimated Shipping Date Calculator
+    - b. Estimated Shipping Date Calculator (2.0)
