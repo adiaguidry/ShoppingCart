@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .nav_horizontal{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        .nav_horizontal li{
+            float: left;
+        }
+        .nav_horizontal li a{
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav_horizontal li a.active{
+            background-color: #4CAF50;
+        }
+        .rightful{
+            float: right;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <ul class="nav_horizontal">
+        <li>
+            <a class="active" href="#store">Store</a>
+        </li>
+        <li>
+            <a href="#cart">
+                <i class="glyphicon glyphicon-shopping-cart"></i> View Cart
+            </a>
+        </li>
+        <ul class="rightful">
+            <li>
+                <a href="#">Login</a>
+            </li>
+        </ul>
+    </ul>
+</header>
+<div class="container">
+    <div class="col-sm-8 cart_list">
+
+    </div>
+    <div class="col-sm-4 cart_stats">
+        <h3>Order Summary</h3>
+        <table class="table table-striped">
+            <tr>
+                <td>Item Costs:</td>
+                <td>$40.89</td>
+            </tr>
+            <tr>
+                <td>Shipping and Handling:</td>
+                <td>$12.97</td>
+            </tr>
+            <tr>
+                <td>Estimated Tax:</td>
+                <td>$1.56</td>
+            </tr>
+        </table>
+        <h5>Order Total: $55.42</h5>
+        <button class="btn btn-default">Continue to Checkout</button>
+    </div>
+</div>
+</body>
+</html>
