@@ -45,10 +45,10 @@ One Page E-Commerce Site built with React and Firebase
 
 ####Shopping Cart: List of items chosen from Catalogue
 
-    - a. Checkout ability: auto-calculates total price of all items in cart
+    a. Checkout ability: auto-calculates total price of all items in cart
     
 ####Order Confirmation Page
 
-    - a. A receipt of all items purchased with total cost etc.
+    a. A receipt of all items purchased with total cost etc.
     
-    - b. Estimated Shipping Date Calculator (2.0)
+    b. Estimated Shipping Date Calculator (2.0)
