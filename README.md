@@ -27,6 +27,10 @@ One Page E-Commerce Site built with React and Firebase
 
 > c. sort by Category (2.0)
 
+> d. sort by Size (2.0)
+
+> e. sort by Color (2.0)
+
 ####Catalogue Item (props):
 
 > a. Price
@@ -40,6 +44,10 @@ One Page E-Commerce Site built with React and Firebase
 > e. Category: Clothes/Electronics...etc. (2.0)
 
 > f. Product Image (2.0)
+
+> g. Product Size Options (2.0)
+
+> h. Color/Styles
 
 #####Catalogue Item: Sub components: Add to Cart Button
 

@@ -9,10 +9,50 @@
         .loaded{
             opacity: 1;
         }
+        .nav_horizontal{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        .nav_horizontal li{
+            float: left;
+        }
+        .nav_horizontal li a{
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav_horizontal li a.active{
+            background-color: #4CAF50;
+        }
+        .rightful{
+            float: right;
+            list-style-type: none;
+        }
     </style>
 </head>
 <body>
+<header>
+    <ul class="nav_horizontal">
+        <li>
+            <a class="active" href="#">Store</a>
+        </li>
+        <li>
+            <a href="#">Shopping Cart</a>
+        </li>
+        <ul class="rightful">
+            <li>
+                <a href="#">Login</a>
+            </li>
+        </ul>
+    </ul>
+</header>
 <div class="container">
+
 </div>
 </body>
 <script src="main.js"></script>
