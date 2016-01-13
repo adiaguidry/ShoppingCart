@@ -22,12 +22,10 @@ One Page E-Commerce Site built with React and Firebase
 1. Catalogue: Immutable (for now) list of items set as Firebase Object
 
 > a. Ability to select items for add into cart
-
-    ###2.0 specs
     
-> b. sort by Brand
+> b. sort by Brand (2.0)
 
-> c. sort by Category
+> c. sort by Category (2.0)
 
 2. Catalogue Item (props):
 
