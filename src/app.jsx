@@ -73,7 +73,7 @@ var Cart = React.createClass({
         //this.firebaseRefs refers to the Firebase object that is automatically created when we made a new instance of Firebase
         return <div className="container">
             <div className={"col-sm-8 content " + (this.state.loaded ? 'loaded' : '')}>
-                <CartList itemsStore={this.firebaseRefs.cart} />
+                <CartList items={this.state.cart} />
             </div>
             <div>
                 <CartSummary items={this.state.cart} />
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function(){
         ReactDOM.render(storeElement, document.getElementById('store'));
     }
     if(document.getElementById('cart')){
-        ReactDOM.render(storeElement, document.getElementById('cart'));
+        //ReactDOM.render(storeElement, document.getElementById('cart'));
     }
 });
 
