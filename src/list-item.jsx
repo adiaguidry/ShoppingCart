@@ -37,6 +37,7 @@ module.exports = React.createClass({
                     onClick={this.handleAddClick}>
                     Add to Cart
                 </button>
+                <i className="check content glyphicon glyphicon-ok"></i>
             </div>
         </div>
     }

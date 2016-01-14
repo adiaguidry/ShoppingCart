@@ -1,12 +1,15 @@
+//Gobal
 var React = require('react');
 var ReactDOM = require('react-dom');
 var ReactFire = require('reactfire');
 var Firebase = require('firebase');
+//Store Dependencies
 var AddItemForm = require('./add-item-form');
 var List = require('./list');
+//Firebase
 var rootUrl = 'https://shoppingcart-react.firebaseio.com/';
 
-var App = React.createClass({
+var Store = React.createClass({
     mixins: [ReactFire],
     getInitialState: function(){
         return {
@@ -40,5 +43,6 @@ var App = React.createClass({
     }
 });
 
-var element = React.createElement(App, {});
-ReactDOM.render(element, document.getElementById('store'));
+var storeElement = React.createElement(Store, {});
+ReactDOM.render(storeElement, document.getElementById('store'));
+
