@@ -6,6 +6,9 @@ var Firebase = require('firebase');
 //Store Dependencies
 var AddItemForm = require('./add-item-form');
 var List = require('./list');
+//Cart Dependencies
+var CartList = require('./cart-list');
+var CartSummary = require('./cart-summary');
 //Firebase
 var rootUrl = 'https://shoppingcart-react.firebaseio.com/';
 
@@ -44,5 +47,47 @@ var Store = React.createClass({
 });
 
 var storeElement = React.createElement(Store, {});
-ReactDOM.render(storeElement, document.getElementById('store'));
+
+var Cart = React.createClass({
+    mixins: [ReactFire],
+    getInitialState: function(){
+        return {
+            cart: {},
+            loaded: false
+        }
+    },
+    componentWillMount: function(){
+        cart = new Firebase(rootUrl + 'cart/');
+        //bindAsObject is ReactFire method that creates new Firebase instance
+        //it also binds 'items' in Firebase into (this.state.items => {}).
+        this.bindAsObject(cart, 'cart');
+        //when Firebase object is loaded and component has been re-rendered, call func handleDataLoaded
+        cart.on('value', this.handleDataLoaded);
+    },
+    handleDataLoaded: function(){
+        console.log(this.state);
+        //flag to set state to loaded after firebase data conneected to app
+        this.setState({loaded: true});
+    },
+    render: function(){
+        //this.firebaseRefs refers to the Firebase object that is automatically created when we made a new instance of Firebase
+        return <div className="container">
+            <div className={"col-sm-8 content " + (this.state.loaded ? 'loaded' : '')}>
+                <CartList itemsStore={this.firebaseRefs.cart} />
+            </div>
+            <div>
+                <CartSummary items={this.state.cart} />
+            </div>
+        </div>
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function(){
+    if(document.getElementById('store')){
+        ReactDOM.render(storeElement, document.getElementById('store'));
+    }
+    if(document.getElementById('cart')){
+        ReactDOM.render(storeElement, document.getElementById('cart'));
+    }
+});
 

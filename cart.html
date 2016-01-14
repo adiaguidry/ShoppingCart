@@ -4,6 +4,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
+        .content{
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+        .loaded{
+            opacity: 1;
+        }
         .nav_horizontal{
             list-style-type: none;
             margin: 0;
@@ -66,7 +73,7 @@
         </ul>
     </ul>
 </header>
-<div class="container cart_table" id="cart">
+<div id="cart">
     <div class="col-sm-8 cart_list">
         <table class="table table-hover">
             <thead>
@@ -165,7 +172,7 @@
             </tbody>
         </table>
     </div>
-    <div class="col-sm-4 cart_stats">
+    <div class="col-sm-4 cart_summary">
         <h3>Order Summary</h3>
         <table class="table table-striped">
             <tr>
