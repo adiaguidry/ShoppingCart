@@ -3,14 +3,14 @@ var ReactDOM = require('react-dom');
 var ReactFire = require('reactfire');
 var Firebase = require('firebase');
 var AddItemForm = require('./add-item-form');
-var ItemList = require('./item-list');
+var List = require('./list');
 var rootUrl = 'https://shoppingcart-react.firebaseio.com/';
 
 var App = React.createClass({
     mixins: [ReactFire],
     getInitialState: function(){
         return {
-            items: {},
+            catalogue: {},
             loaded: false
         }
     },
@@ -23,6 +23,7 @@ var App = React.createClass({
         fb.on('value', this.handleDataLoaded);
     },
     handleDataLoaded: function(){
+        console.log(this.state);
         //flag to set state to loaded after firebase data conneected to app
         this.setState({loaded: true});
     },
@@ -33,7 +34,7 @@ var App = React.createClass({
                     <AddItemForm itemsStore={this.firebaseRefs.catalogue} />
                 </div>
                 <div className={"col-sm-10 content " + (this.state.loaded ? 'loaded' : '')}>
-                    <ItemList items={this.state.items} />
+                    <List items={this.state.catalogue} />
                 </div>
             </div>
     }
