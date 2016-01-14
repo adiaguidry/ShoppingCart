@@ -8,7 +8,8 @@ module.exports = React.createClass({
             productName: this.props.item.productName,
             productDescription: this.props.item.productDescription,
             price: this.props.item.price,
-            inStock: this.props.item.inStock
+            inStock: this.props.item.inStock,
+            quantity: parseInt(this.props.quantity)
         }
     },
     componentWillMount: function(){
@@ -16,12 +17,13 @@ module.exports = React.createClass({
         ref = new Firebase(rootUrl + 'cart/');
     },
     handleAddClick: function(){
-        console.log('here');
+        console.log('this.state.quantity is: ' + this.state.quantity);
         ref.push({
             productName: this.props.item.productName,
             productDescription: this.props.item.productDescription,
             price: this.props.item.price,
-            inStock: this.props.item.inStock
+            inStock: this.props.item.inStock,
+            quantity: this.state.quantity + 1
         })
     },
     render: function(){

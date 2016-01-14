@@ -1,5 +1,5 @@
 var React = require('react');
-var CartItem = require('cart-item');
+var CartItem = require('./cart-item');
 
 module.exports = React.createClass({
     renderCart: function(){

@@ -1,4 +1,5 @@
 var React = require('react');
+var rootUrl = 'https://shoppingcart-react.firebaseio.com/';
 
 module.exports = React.createClass({
     getInitialState: function(){
@@ -6,21 +7,31 @@ module.exports = React.createClass({
             productName: this.props.item.productName,
             productDescription: this.props.item.productDescription,
             price: this.props.item.price,
-            inStock: this.props.item.inStock
+            inStock: this.props.item.inStock,
+            textChanged: false
         }
     },
     componentWillMount: function(){
         //set each component to point to the corresponding Firebase object
-        cart_item = new Firebase(rootUrl + 'cart/');
+        this.fb = new Firebase(rootUrl + 'cart/' + this.props.item.key);
     },
-    handleAddClick: function(){
+    handleUpdateClick: function(){
         console.log('here');
-        ref.push({
+        this.fb.update({
             productName: this.props.item.productName,
             productDescription: this.props.item.productDescription,
             price: this.props.item.price,
             inStock: this.props.item.inStock
         })
+    },
+    handleTextChange: function(){
+        this.setState({
+            text: event.target.value,
+            textChanged: true
+        })
+    },
+    handleDeleteClick: function(){
+        this.fb.remove();
     },
     render: function(){
         return <div className="col-sm-3 item_container">

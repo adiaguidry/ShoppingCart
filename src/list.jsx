@@ -12,6 +12,7 @@ module.exports = React.createClass({
                 <ListItem
                     //pass down item and key to ListItem
                     item={item}
+                    quantity="0"
                     key={key}>
                 </ListItem>
             )
