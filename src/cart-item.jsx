@@ -39,8 +39,8 @@ module.exports = React.createClass({
     render: function(){
         return <tr>
             <td>
-                <h5>{this.props.item.productName}</h5>
-                <img className="product_img" src="images/mask.jpg" />
+                <h5 className="centered">{this.props.item.productName}</h5>
+                <img className="product_img_cart" src="images/mask.jpg" />
             </td>
             <td>{this.props.item.price}</td>
             <td>

@@ -17,7 +17,7 @@ module.exports = React.createClass({
         return children;
     },
     render: function(){
-        return <table>
+        return <table className="table table-hover">
             <thead>
                 <tr>
                     <th>Shopping Cart Items</th>

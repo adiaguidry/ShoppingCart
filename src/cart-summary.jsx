@@ -10,7 +10,7 @@ module.exports = React.createClass({
     render: function(){
         return <div>
                 <h3>Order Summary</h3>
-                <table>
+                <table className="table table-striped">
                     <tr>
                         <td>Item Costs:</td>
                         <td>{}</td>
