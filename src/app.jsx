@@ -75,19 +75,21 @@ var Cart = React.createClass({
             <div className={"col-sm-8 content " + (this.state.loaded ? 'loaded' : '')}>
                 <CartList items={this.state.cart} />
             </div>
-            <div>
+            <div className="col-sm-4">
                 <CartSummary items={this.state.cart} />
             </div>
         </div>
     }
 });
 
+var cartElement = React.createElement(Cart, {});
+
 document.addEventListener('DOMContentLoaded', function(){
     if(document.getElementById('store')){
         ReactDOM.render(storeElement, document.getElementById('store'));
     }
     if(document.getElementById('cart')){
-        //ReactDOM.render(storeElement, document.getElementById('cart'));
+        ReactDOM.render(cartElement, document.getElementById('cart'));
     }
 });
 

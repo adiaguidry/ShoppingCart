@@ -8,6 +8,7 @@ module.exports = React.createClass({
             productDescription: this.props.item.productDescription,
             price: this.props.item.price,
             inStock: this.props.item.inStock,
+            quantity: this.props.item.quantity,
             textChanged: false
         }
     },
@@ -21,7 +22,9 @@ module.exports = React.createClass({
             productName: this.props.item.productName,
             productDescription: this.props.item.productDescription,
             price: this.props.item.price,
-            inStock: this.props.item.inStock
+            inStock: this.props.item.inStock,
+            //use state here because that is the part we are updating
+            quantity: this.state.quantity
         })
     },
     handleTextChange: function(){
@@ -34,20 +37,30 @@ module.exports = React.createClass({
         this.fb.remove();
     },
     render: function(){
-        return <div className="col-sm-3 item_container">
-            <img className="product_img" src="images/mask.jpg" />
-            <div>
-                <h4>{this.props.item.productName}</h4>
-                <p>{this.props.item.productDescription}</p>
-                <p>{this.props.item.price}</p>
-                <p>{this.props.item.inStock}</p>
+        return <tr>
+            <td>
+                <h5>{this.props.item.productName}</h5>
+                <img className="product_img" src="images/mask.jpg" />
+            </td>
+            <td>{this.props.item.price}</td>
+            <td>
+                <input
+                    className="qty_input"
+                    value={this.props.item.quantity}
+                    onChange={this.handleTextChange}/>
                 <button
                     className="btn btn-default"
-                    onClick={this.handleAddClick}>
-                    Add to Cart
+                    onClick={this.handleUpdateClick}>
+                    Update Cart
                 </button>
-                <i className="check content glyphicon glyphicon-ok"></i>
-            </div>
-        </div>
+            </td>
+            <td>
+                <button
+                    className="btn btn-default"
+                    onClick={this.handleDeleteClick}>
+                    Remove from Cart
+                </button>
+            </td>
+        </tr>
     }
 });
