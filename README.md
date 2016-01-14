@@ -19,7 +19,10 @@ One Page E-Commerce Site built with React and Firebase
 > project file should be running on local host port 8000
 
 ## Components
-####Catalogue: Immutable (for now) list of items set as Firebase Object
+####Add Item Form: for adding new items into Firebase
+> Can be used by users with admin rights later. Sellers/Buyers
+
+####Catalogue (List): Immutable (for now) list of items set as Firebase Object
 
 > a. Ability to select items for add into cart
     
@@ -27,11 +30,11 @@ One Page E-Commerce Site built with React and Firebase
 
 > c. sort by Category (2.0)
 
-####Catalogue Item (props):
+####Catalogue Item (ListItem):
 
 > a. Price
 
-> b. Availability
+> b. Availability (inStock)
     
 > c. Estimated Shipping Date (2.0)
 
@@ -39,7 +42,7 @@ One Page E-Commerce Site built with React and Firebase
 
 > e. Category: Clothes/Electronics...etc. (2.0)
 
-> f. Product Image (2.0)
+> f. Product Image (currently using static img)
 
 #####Catalogue Item: Sub components: Add to Cart Button
 
