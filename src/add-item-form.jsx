@@ -11,6 +11,7 @@ module.exports = React.createClass({
         }
     },
     handleClick: function(){
+        console.log(this.state);
         //Sends value of form input to Firebase
         this.props.itemsStore.push({
             //fill in with form input params
@@ -40,13 +41,13 @@ module.exports = React.createClass({
         this.setState({productDescription: event.target.value});
     },
     handleInputChangePrice: function(event){
-        this.setState({price: event.target.price});
+        this.setState({price: event.target.value});
     },
     handleInputChangeIS: function(event){
-        this.setState({inStock: event.target.inStock});
+        this.setState({inStock: event.target.value});
     },
     render: function(){
-        return <div>
+        return <div className="thumbnail">
             <form>
                 <div className="form-group">
                     <label>Product Name</label>
@@ -84,7 +85,7 @@ module.exports = React.createClass({
                     onClick={this.handleClick}
                     className="btn btn-default"
                     type="button">
-                    Add Item to Catalogue
+                    Add to Catalogue
                 </button>
             </form>
         </div>

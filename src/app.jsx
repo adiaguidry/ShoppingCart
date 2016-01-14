@@ -30,7 +30,7 @@ var App = React.createClass({
         //this.firebaseRefs refers to the Firebase object that is automatically created when we made a new instance of Firebase
         return <div className="container">
                 <div className="col-sm-2">
-                    <AddItemForm itemStore={this.firebaseRefs.items} />
+                    <AddItemForm itemsStore={this.firebaseRefs.catalogue} />
                 </div>
                 <div className={"col-sm-10 content " + (this.state.loaded ? 'loaded' : '')}>
                     <ItemList items={this.state.items} />
