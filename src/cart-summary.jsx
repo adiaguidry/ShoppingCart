@@ -36,7 +36,8 @@ module.exports = React.createClass({
             this.data.item_costs += parseFloat(item.price);
         }
         //calculate tax: assume 10%
-        this.data.tax = parseFloat(this.data.item_costs) * 0.1;
+        this.data.tax = Math.round((parseFloat(this.data.item_costs) * 0.075) * 100) / 100;
+        console.log('this.data.tax is :', this.data.tax);
         //calculate total cost
         this.data.total = this.data.item_costs + this.data.s_and_h + this.data.tax;
         this.setState({
@@ -61,7 +62,7 @@ module.exports = React.createClass({
                         <td>{this.state.data.s_and_h}</td>
                     </tr>
                     <tr>
-                        <td>Estimated Tax:</td>
+                        <td>Estimated Tax (7.5%):</td>
                         <td>{this.state.data.tax}</td>
                     </tr>
                 </table>
