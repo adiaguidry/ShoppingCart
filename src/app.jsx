@@ -65,7 +65,6 @@ var Cart = React.createClass({
         cart.on('value', this.handleDataLoaded);
     },
     handleDataLoaded: function(){
-        console.log(this.state);
         //flag to set state to loaded after firebase data conneected to app
         this.setState({loaded: true});
     },
